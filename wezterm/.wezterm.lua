@@ -1,1 +1,0 @@
-C:/Users/yz-win/.wezterm.lua

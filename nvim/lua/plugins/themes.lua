@@ -28,6 +28,7 @@ return {
 					local cfg = require("rasmus.config").config
 					local c = variants[cfg.variant]
 
+					-- :Inspect or :InspectTree to see these tokens.
 					vim.api.nvim_set_hl(0, "Function", { fg = c.bright_white })
 					vim.api.nvim_set_hl(0, "Type", { italic = false })
 					vim.api.nvim_set_hl(0, "Identifier", { fg = c.bright_white })

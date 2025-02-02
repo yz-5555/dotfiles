@@ -87,10 +87,13 @@ local keys = {
 return {
 	colors = rasmus,
 
-	font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Bold" }),
-	font_size = 12.0,
-	freetype_load_flags = "FORCE_AUTOHINT",
-	freetype_load_target = "HorizontalLcd",
+	font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "DemiBold" }),
+	harfbuzz_features = { "cv01", "cv03", "cv02", "cv11" },
+
+	font_size = 12.5,
+	line_height = 1.1,
+	-- freetype_load_flags = "NORMAL",
+	freetype_load_target = "Light",
 	freetype_render_target = "HorizontalLcd",
 
 	initial_cols = 120,

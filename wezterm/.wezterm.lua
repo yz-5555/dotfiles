@@ -99,7 +99,7 @@ return {
 	initial_cols = 120,
 	initial_rows = 30,
 
-	default_prog = { "powershell" },
+	default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" },
 
 	hide_tab_bar_if_only_one_tab = true,
 

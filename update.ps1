@@ -13,3 +13,4 @@ function Dotfile ($source, $target) {
 
 Dotfile -source "C:\Users\yz-win\.wezterm.lua" -target "wezterm\.wezterm.lua"
 Dotfile -source "C:\Users\yz-win\AppData\Local\nvim" -target "nvim"
+Dotfile -source "C:\Users\yz-win\.config\starship.toml" -target "starship\starship.toml"

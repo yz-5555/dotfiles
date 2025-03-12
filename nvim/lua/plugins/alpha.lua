@@ -29,9 +29,9 @@ return {
 		theme.section.footer.val = footer()
 
 		theme.section.buttons.val = {
-			theme.button("f", "  > Find file", ":cd D:\\devs\\projects | Telescope find_files<CR>"),
-			theme.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
-			theme.button("s", "  > Settings", ":cd ~\\AppData\\Local\\nvim | Telescope find_files<CR>"),
+			theme.button("f", "  > Find file", ":cd D:\\devs\\projects | FzfLua files<CR>"),
+			theme.button("r", "  > Marks", ":FzfLua marks<CR>"),
+			theme.button("s", "  > Settings", ":cd ~\\AppData\\Local\\nvim | FzfLua files<CR>"),
 			theme.button("q", "󰈆  > Quit NVIM", ":qa<CR>"),
 		}
 		require("alpha").setup(theme.config)

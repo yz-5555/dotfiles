@@ -93,7 +93,7 @@ return {
 	font_size = 12.5,
 	line_height = 1.1,
 	-- freetype_load_flags = "NORMAL",
-	freetype_load_target = "Light",
+	freetype_load_target = "Normal",
 	freetype_render_target = "HorizontalLcd",
 
 	initial_cols = 120,

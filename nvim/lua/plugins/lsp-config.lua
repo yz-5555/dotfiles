@@ -38,13 +38,6 @@ return {
 				cmd = { "zls" },
 				capabilities = capabilities,
 			})
-
-			vim.diagnostic.config({
-				virtual_text = true,
-				signs = true,
-				underline = true,
-				severity_sort = true,
-			})
 			-- rust lsp is handled by rustaceanvim.
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

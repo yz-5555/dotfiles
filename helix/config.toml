@@ -1,0 +1,19 @@
+theme = "onedark"
+
+[editor]
+shell = ["pwsh", "-Command"]
+
+[editor.lsp]
+snippets = false
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
+[editor.indent-guides]
+render = true

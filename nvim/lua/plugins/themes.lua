@@ -38,6 +38,11 @@ return {
 					-- struct / class
 					vim.api.nvim_set_hl(0, "@type.c", { fg = c.bright_yellow })
 					vim.api.nvim_set_hl(0, "@type.cpp", { fg = c.bright_yellow })
+					-- diagnostics
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { fg = c.red, underline = true })
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { fg = c.yellow, underline = true })
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { fg = c.blue, underline = true })
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { fg = c.cyan, underline = true })
 				end,
 			})
 		end,

@@ -19,7 +19,7 @@ return {
 		}
 		local function footer()
 			local total_plugins = #require("lazy").plugins()
-			local datetime = os.date(" %d-%m-%Y   %H:%M:%S")
+			local datetime = os.date(" %Y-%m-%d   %H:%M:%S")
 			local version = vim.version()
 			local nvim_version_info = "   v" .. version.major .. "." .. version.minor .. "." .. version.patch
 
@@ -32,7 +32,7 @@ return {
 			theme.button("f", "  > Find file", ":cd D:\\devs\\projects | FzfLua files<CR>"),
 			theme.button("r", "  > Marks", ":FzfLua marks<CR>"),
 			theme.button("s", "  > Settings", ":cd ~\\AppData\\Local\\nvim | FzfLua files<CR>"),
-			theme.button("q", "󰈆  > Quit NVIM", ":qa<CR>"),
+			theme.button("q", "󰈆  > Quit", ":qa<CR>"),
 		}
 		require("alpha").setup(theme.config)
 	end,

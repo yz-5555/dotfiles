@@ -1,7 +1,7 @@
 return {
 	{
 		"rachartier/tiny-inline-diagnostic.nvim",
-		event = "VeryLazy", -- Or `LspAttach`
+		event = "VeryLazy", -- or `lspattach`
 		priority = 1000, -- needs to be loaded in first
 		config = function()
 			require("tiny-inline-diagnostic").setup({
@@ -14,10 +14,10 @@ return {
 					show_all_diags_on_cursorline = true,
 				},
 				-- hi = {
-				-- 	error = "DiagnosticUnderlineError", -- Highlight group for error messages
-				-- 	warn = "DiagnosticUnderlineWarn", -- Highlight group for warning messages
-				-- 	info = "DiagnosticUnderlineInfo", -- Highlight group for informational messages
-				-- 	hint = "DiagnosticUnderlineHint", -- Highlight group for hint or suggestion messages
+				-- 	error = "diagnosticunderlineerror", -- highlight group for error messages
+				-- 	warn = "diagnosticunderlinewarn", -- highlight group for warning messages
+				-- 	info = "diagnosticunderlineinfo", -- highlight group for informational messages
+				-- 	hint = "diagnosticunderlinehint", -- highlight group for hint or suggestion messages
 				-- },
 			})
 			vim.diagnostic.config({

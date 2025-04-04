@@ -61,33 +61,4 @@ return {
 			})
 		end,
 	},
-	-- {
-	-- 	"AlexvZyl/nordic.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		local nordic = require("nordic")
-	-- 		nordic.setup({
-	-- 			on_palette = function(palette) end,
-	-- 			after_palette = function(palette) end,
-	-- 			on_highlight = function(highlights, palette) end,
-	--
-	-- 			reduced_blue = true,
-	-- 			swap_backgrounds = true,
-	-- 			italic_comments = false,
-	-- 			bold_keywords = true,
-	-- 		})
-	-- 		nordic.load()
-	-- 	end,
-	-- },
-	-- {
-	-- 	"ramojus/mellifluous.nvim",
-	-- 	config = function()
-	-- 		require("mellifluous").setup({
-	-- 			colorset = "mellifluous",
-	-- 			dim_inactive = true,
-	-- 		})
-	-- 		vim.cmd("colorscheme mellifluous")
-	-- 	end,
-	-- },
 }

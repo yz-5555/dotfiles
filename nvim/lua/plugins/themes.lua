@@ -29,11 +29,13 @@ return {
 					local c = variants[cfg.variant]
 
 					-- :Inspect or :InspectTree to see these tokens.
-					vim.api.nvim_set_hl(0, "Function", { fg = c.bright_white })
+					vim.api.nvim_set_hl(0, "Function", { fg = c.blue })
 					vim.api.nvim_set_hl(0, "Type", { italic = false })
 					vim.api.nvim_set_hl(0, "Identifier", { fg = c.bright_white })
 					vim.api.nvim_set_hl(0, "Macro", { bold = true, italic = false })
-					vim.api.nvim_set_hl(0, "Special", { fg = c.blue, italic = false })
+					vim.api.nvim_set_hl(0, "Special", { fg = c.bright_magenta, italic = false })
+					vim.api.nvim_set_hl(0, "@constructor.lua", { fg = c.blue, italic = false })
+					vim.api.nvim_set_hl(0, "Keyword", { fg = c.bright_magenta })
 					vim.api.nvim_set_hl(0, "@keyword.operator.c", { fg = c.yellow })
 					-- struct / class
 					vim.api.nvim_set_hl(0, "@type.c", { fg = c.bright_yellow })

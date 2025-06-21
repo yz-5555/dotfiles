@@ -90,7 +90,7 @@ return {
 	font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "DemiBold" }),
 	harfbuzz_features = { "cv01", "cv03", "cv02", "cv11" },
 
-	font_size = 12.5,
+	font_size = 11.5,
 	line_height = 1.1,
 	-- freetype_load_flags = "NORMAL",
 	freetype_load_target = "Normal",

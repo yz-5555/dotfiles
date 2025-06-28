@@ -1,0 +1,317 @@
+{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": "2025-06-27T21:31:37+09:00",
+            "Manifests": 1391
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2025-06-27T21:30:47+09:00",
+            "Manifests": 2169
+        },
+        {
+            "Name": "versions",
+            "Source": "https://github.com/ScoopInstaller/Versions",
+            "Updated": "2025-06-27T22:05:14+09:00",
+            "Manifests": 500
+        },
+        {
+            "Name": "nerd-fonts",
+            "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
+            "Updated": "2025-06-27T22:34:34+09:00",
+            "Manifests": 367
+        }
+    ],
+    "apps": [
+        {
+            "Name": "7zip",
+            "Version": "24.09",
+            "Updated": "2024-12-29T19:31:10.7146043+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "cmake",
+            "Version": "4.0.3",
+            "Updated": "2025-06-28T01:23:54.8287723+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "dark",
+            "Version": "3.14.1",
+            "Updated": "2025-05-24T12:43:13.7633774+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "fd",
+            "Version": "10.2.0",
+            "Updated": "2024-12-29T19:29:43.613048+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "ffmpeg",
+            "Version": "7.1.1",
+            "Updated": "2025-03-12T22:48:43.3075432+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "fzf",
+            "Version": "0.62.0",
+            "Updated": "2025-05-12T16:13:15.1908557+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "g-helper",
+            "Version": "0.213",
+            "Updated": "2025-06-28T01:26:14.0352001+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "git",
+            "Version": "2.50.0",
+            "Updated": "2025-06-28T01:24:18.7100866+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "glazewm",
+            "Version": "3.9.1",
+            "Updated": "2025-06-28T01:24:23.7123269+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "helix",
+            "Version": "25.01.1",
+            "Updated": "2025-03-12T22:56:23.2391475+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "imagemagick",
+            "Version": "7.1.1-47",
+            "Updated": "2025-04-02T21:58:18.4895944+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "innounp",
+            "Version": "2.64.5",
+            "Updated": "2025-06-28T01:24:27.805519+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "jetbrainsmono-nf-mono",
+            "Version": "3.4.0",
+            "Updated": "2025-05-12T16:13:26.0157319+09:00",
+            "Source": "nerd-fonts",
+            "Info": ""
+        },
+        {
+            "Name": "jq",
+            "Version": "1.8.0",
+            "Updated": "2025-06-04T21:20:29.3481426+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "librewolf",
+            "Version": "139.0.4-1",
+            "Updated": "2025-06-28T01:24:36.7955487+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "llvm",
+            "Version": "20.1.7",
+            "Updated": "2025-06-28T01:25:10.9155683+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "lua-language-server",
+            "Version": "3.15.0",
+            "Updated": "2025-06-28T01:25:16.3474014+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "make",
+            "Version": "4.4.1",
+            "Updated": "2024-12-06T14:50:26.4123026+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "neovim",
+            "Version": "0.11.2",
+            "Updated": "2025-06-04T21:21:09.7663506+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "ninja",
+            "Version": "1.13.0",
+            "Updated": "2025-06-28T01:25:21.5301504+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "nodejs",
+            "Version": "24.3.0",
+            "Updated": "2025-06-28T01:25:31.0626821+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "notion",
+            "Version": "4.13.1",
+            "Updated": "2025-06-28T01:25:39.3264294+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "ntop",
+            "Version": "0.3.21",
+            "Updated": "2025-03-31T23:50:55.0525534+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "obsidian",
+            "Version": "1.8.10",
+            "Updated": "2025-04-23T23:11:27.1667311+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "poppler",
+            "Version": "24.08.0-0",
+            "Updated": "2024-12-29T19:29:41.6226642+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "premake5",
+            "Version": "5.0.0-alpha15",
+            "Updated": "2024-12-05T19:36:56.1665636+09:00",
+            "Source": "versions",
+            "Info": ""
+        },
+        {
+            "Name": "python310",
+            "Version": "3.10.11",
+            "Updated": "2025-05-24T12:43:39.1364171+09:00",
+            "Source": "versions",
+            "Info": ""
+        },
+        {
+            "Name": "ripgrep",
+            "Version": "14.1.1",
+            "Updated": "2024-11-28T11:27:42.5986629+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "rustup",
+            "Version": "1.28.2",
+            "Updated": "2025-05-12T16:14:30.8145277+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "signal",
+            "Version": "7.59.0",
+            "Updated": "2025-06-28T01:25:47.5504952+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "starship",
+            "Version": "1.23.0",
+            "Updated": "2025-05-12T16:14:34.0831716+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "stylua",
+            "Version": "2.1.0",
+            "Updated": "2025-04-23T23:13:47.8090725+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "telegram",
+            "Version": "5.15.4",
+            "Updated": "2025-06-21T12:51:34.1810241+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "unzip",
+            "Version": "6.00",
+            "Updated": "2024-11-28T11:31:30.0647913+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "vcredist2022",
+            "Version": "14.44.35208.0",
+            "Updated": "2025-06-04T21:21:51.6687591+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "wezterm",
+            "Version": "20240203-110809-5046fc22",
+            "Updated": "2025-01-17T16:00:34.5856355+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "yazi",
+            "Version": "25.5.31",
+            "Updated": "2025-06-04T21:21:54.0357668+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "zebar",
+            "Version": "3.1.1",
+            "Updated": "2025-06-28T01:25:54.1075108+09:00",
+            "Source": "extras",
+            "Info": ""
+        },
+        {
+            "Name": "zig",
+            "Version": "0.14.1",
+            "Updated": "2025-06-04T21:30:54.0310794+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "zls",
+            "Version": "0.14.0",
+            "Updated": "2025-03-12T22:55:50.0158978+09:00",
+            "Source": "main",
+            "Info": ""
+        },
+        {
+            "Name": "zoxide",
+            "Version": "0.9.8",
+            "Updated": "2025-06-04T21:30:55.2865013+09:00",
+            "Source": "main",
+            "Info": ""
+        }
+    ]
+}

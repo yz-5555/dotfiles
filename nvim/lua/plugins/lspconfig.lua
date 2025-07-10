@@ -9,6 +9,14 @@ return {
 			local on_attach = function(client, bufnr)
 				local opts = { buffer = bufnr, silent = true }
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+				vim.keymap.set("n", "gd", function()
+					vim.lsp.buf.definition()
+					vim.cmd("noh")
+				end, opts)
+				vim.keymap.set("n", "gD", function()
+					vim.lsp.buf.declaration()
+					vim.cmd("noh")
+				end, opts)
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			end
 

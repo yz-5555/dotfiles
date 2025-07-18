@@ -1,70 +1,49 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = { "saghen/blink.cmp" },
 		config = function()
-			local capabilities = require("blink.cmp").get_lsp_capabilities()
-			local lspconfig = require("lspconfig")
+			vim.lsp.config("*", {})
 
-			local on_attach = function(client, bufnr)
-				local opts = { buffer = bufnr, silent = true }
-				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-				vim.keymap.set("n", "gd", function()
-					vim.lsp.buf.definition()
-					vim.cmd("noh")
-				end, opts)
-				vim.keymap.set("n", "gD", function()
-					vim.lsp.buf.declaration()
-					vim.cmd("noh")
-				end, opts)
-				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-			end
-
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-				on_attach = on_attach,
-				root_dir = lspconfig.util.root_pattern(".git", ".luarc.json"),
+			vim.lsp.config("lua_ls", {
+				single_file_support = true,
+				filetypes = { "lua" },
+				root_markers = { ".luarc.json", ".git" },
 			})
-			lspconfig.clangd.setup({
+			vim.lsp.config("clangd", {
 				cmd = {
 					"clangd",
 					"--fallback-style=llvm",
 					"--background-index",
 				},
-				capabilities = capabilities,
-				on_attach = on_attach,
 				filetypes = { "c", "cpp" },
 				single_file_support = true,
-				root_dir = lspconfig.util.root_pattern(".git", ".clangd"),
+				root_markers = { ".clangd", ".git" },
 			})
-			lspconfig.neocmake.setup({
-				cmd = {
-					"neocmakelsp",
-					"--stdio",
-				},
-				capabilities = capabilities,
-				on_attach = on_attach,
-				filetypes = { "cmake" },
-				single_file_support = true,
-				root_dir = function(fname)
-					return lspconfig.util.find_git_ancestor(fname)
-				end,
-				init_options = {
-					format = {
-						enable = true,
-					},
-					lint = {
-						enable = true,
-					},
-					scan_cmake_in_package = true,
-				},
-			})
-			lspconfig.zls.setup({
+			vim.lsp.config("zls", {
 				cmd = { "zls" },
-				capabilities = capabilities,
-				on_attach = on_attach,
 				filetypes = { "zig" },
-				root_dir = lspconfig.util.root_pattern(".git", "build.zig"),
+				single_file_support = true,
+				root_markers = { "build.zig", ".git" },
+			})
+
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(event)
+					local opts = { buffer = event.buf, silent = true }
+
+					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+					vim.keymap.set("n", "gd", function()
+						vim.lsp.buf.definition()
+						vim.cmd("noh")
+					end, opts)
+					vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+				end,
+			})
+
+			vim.lsp.enable({
+				"lua_ls",
+				"clangd",
+				"zls",
 			})
 		end,
 	},

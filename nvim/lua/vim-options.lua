@@ -17,8 +17,3 @@ vim.o.shellxquote = ""
 
 -- Set border
 vim.o.winborder = "rounded"
-
--- yank
-vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
-vim.keymap.set({ "n", "x" }, "cp", '"+y')
-vim.keymap.set({ "n", "x" }, "cv", '"+p')

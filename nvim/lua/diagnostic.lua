@@ -13,4 +13,4 @@ vim.diagnostic.config({
 	severity_sort = true,
 })
 
-vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float, {})
+vim.keymap.set("n", "df", vim.diagnostic.open_float, {})

@@ -9,8 +9,6 @@ return {
 					null_ls.builtins.formatting.stylua,
 				},
 			})
-
-			vim.keymap.set("n", "<C-f>", vim.lsp.buf.format, {})
 		end,
 	},
 }

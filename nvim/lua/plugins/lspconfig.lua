@@ -36,6 +36,10 @@ return {
 						vim.lsp.buf.definition()
 						vim.cmd("noh")
 					end, opts)
+					vim.keymap.set("n", "gD", function()
+						vim.lsp.buf.declaration()
+						vim.cmd("noh")
+					end, opts)
 					vim.keymap.set("n", "rn", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, opts)
 				end,

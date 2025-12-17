@@ -22,7 +22,7 @@ local clipboard = {
 local manage_pane = {
 	{ key = "-",  mods = "ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "\\", mods = "ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "q",   mods = "ALT", action = act.CloseCurrentPane({ confirm = true }) },
+	{ key = "q",   mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
 }
 local resize_pane = {
 	{ key = "h", mods = "ALT", action = act.AdjustPaneSize({ "Left", 1 }) },
@@ -38,7 +38,7 @@ local activate_pane = {
 }
 local manage_tab = {
 	{ key = "t", mods = "ALT", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "d", mods = "ALT", action = act.CloseCurrentTab({ confirm = true }) },
+	{ key = "d", mods = "LEADER", action = act.CloseCurrentTab({ confirm = true }) },
 }
 
 local keys = {}

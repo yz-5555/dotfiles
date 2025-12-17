@@ -1,7 +1,7 @@
 -- yank
 vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
-vim.keymap.set({ "n", "x" }, "cp", '"+y')
-vim.keymap.set({ "n", "x" }, "cv", '"+p')
+vim.keymap.set({ "n", "x" }, "cc", '"+y')
+vim.keymap.set({ "n", "x" }, "cp", '"+p')
 
 local opts = { noremap = true, silent = true }
 

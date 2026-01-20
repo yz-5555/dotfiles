@@ -18,14 +18,3 @@ copy = "./winfetch"
 original = "~/Documents/PowerShell"
 copy = "./pwsh"
 
-[[dotfiles]]
-original = "~/Documents/devs/projects/.clang-format"
-copy = "../shared/.clang-format"
-
-[[dotfiles]]
-original = "~/.config/nvim"
-copy = "../shared/nvim"
-
-[[dotfiles]]
-original = "~/.config/yazi"
-copy = "../shared/yazi"

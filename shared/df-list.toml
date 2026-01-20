@@ -1,0 +1,11 @@
+[[dotfiles]]
+original = "~/Documents/devs/projects/.clang-format"
+copy = "./.clang-format"
+
+[[dotfiles]]
+original = "~/.config/nvim"
+copy = "./nvim"
+
+[[dotfiles]]
+original = "~/.config/yazi"
+copy = "./yazi"

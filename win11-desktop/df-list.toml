@@ -29,7 +29,3 @@ copy = "../shared/nvim"
 [[dotfiles]]
 original = "~/.config/yazi"
 copy = "../shared/yazi"
-
-[[dotfiles]]
-original = "~/.config/df-config.toml"
-copy = "./df-config.toml"

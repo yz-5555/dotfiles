@@ -1,0 +1,15 @@
+[[dotfiles]]
+original = "//wsl.localhost/FedoraLinux-43/home/yz/.config/starship.toml"
+copy = "./starship.toml"
+
+[[dotfiles]]
+original = "//wsl.localhost/FedoraLinux-43/home/yz/.config/nvim"
+copy = "./nvim"
+
+[[dotfiles]]
+original = "//wsl.localhost/FedoraLinux-43/home/yz/.config/yazi"
+copy = "./yazi"
+
+[[dotfiles]]
+original = "//wsl.localhost/FedoraLinux-43/home/yz/.bashrc"
+copy = ".bashrc"

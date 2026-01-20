@@ -1,0 +1,35 @@
+[[dotfiles]]
+original = "~/.config/starship.toml"
+copy = "./starship.toml"
+
+[[dotfiles]]
+original = "~/.config/wezterm"
+copy = "./wezterm"
+
+[[dotfiles]]
+original = "~/.config/alacritty"
+copy = "./alacritty"
+
+[[dotfiles]]
+original = "~/.config/winfetch"
+copy = "./winfetch"
+
+[[dotfiles]]
+original = "~/Documents/PowerShell"
+copy = "./pwsh"
+
+[[dotfiles]]
+original = "~/Documents/devs/projects/.clang-format"
+copy = "../shared/.clang-format"
+
+[[dotfiles]]
+original = "~/.config/nvim"
+copy = "../shared/nvim"
+
+[[dotfiles]]
+original = "~/.config/yazi"
+copy = "../shared/yazi"
+
+[[dotfiles]]
+original = "~/.config/df-config.toml"
+copy = "./df-config.toml"

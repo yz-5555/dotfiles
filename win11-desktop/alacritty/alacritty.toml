@@ -1,0 +1,24 @@
+[general]
+import = [ "~/.config/alacritty/alacritty-rasmus.toml" ]
+
+live_config_reload = true
+
+[font]
+size = 11.5
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "SemiBold"
+
+[keyboard]
+bindings = [
+{ key = "c", mods = "Alt", action = "Copy"},
+{ key = "v", mods = "Alt", action = "Paste"}
+]
+
+# alacritty doesn't support this.
+# [font.features]
+# "*" = ["cv01", "cv02", "cv03", "cv11", "cv12"]
+
+[terminal.shell]
+program = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"

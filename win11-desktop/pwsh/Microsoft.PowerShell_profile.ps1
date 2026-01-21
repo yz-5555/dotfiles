@@ -25,7 +25,7 @@ Set-PermanentEnvVar "XDG_DATA_HOME" "C:\Users\yz\.local\share" # nvim-data
 Set-EnvVar "EDITOR" "nvim"
 Set-EnvVar "YAZI_CONFIG_HOME" "$HOME\.config\yazi"
 Set-EnvVar "YAZI_FILE_ONE" "$HOME\scoop\apps\git\current\usr\bin\file.exe"
-Set-EnvVar "DDF_TARGET" "$HOME\Documents\devs\dotfiles"
+Set-EnvVar "DDF_TARGET" "$HOME\Documents\dev\dotfiles"
 # notes
 # Alacritty DOES NOT support changing the config path.
-Append-Path "$HOME\Documents\devs\projects\ddf\target\release"
+Append-Path "$HOME\Documents\dev\projects\ddf\target\release"

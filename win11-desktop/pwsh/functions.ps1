@@ -1,15 +1,15 @@
 # cd
 function cddot ($path) {
-	cd "C:\Users\yz\Documents\devs\dotfiles\$path"
+	cd "C:\Users\yz\Documents\dev\dotfiles\$path"
 }
-function cddf ($path) {
-	cd "C:\Users\yz\Documents\devs\dotfiles\df\$path"
+function cdnotes ($path) {
+	cd "C:\Users\yz\Documents\notes\$path"
 }
 function cdpwsh ($path) {
 	cd "C:\Users\yz\Documents\PowerShell\$path"
 }
 function cdproj ($path) {
-	cd "C:\Users\yz\Documents\devs\projects\$path"
+	cd "C:\Users\yz\Documents\dev\projects\$path"
 }
 function cdconf ($path) {
 	cd "C:\Users\yz\.config\$path"

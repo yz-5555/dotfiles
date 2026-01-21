@@ -12,7 +12,6 @@ return {
 				auto_install = true,
 				highlight = {
 					enable = true,
-					disable = { "rust" },
 				},
 				additional_vim_regex_highlighting = false,
 				indent = {

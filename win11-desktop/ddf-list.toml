@@ -19,7 +19,7 @@ original = "~/Documents/PowerShell"
 copy = "./pwsh"
 
 [[dotfiles]]
-original = "~/Documents/devs/projects/.clang-format"
+original = "~/Documents/dev/projects/.clang-format"
 copy = "./.clang-format"
 
 [[dotfiles]]
@@ -29,5 +29,3 @@ copy = "./nvim"
 [[dotfiles]]
 original = "~/.config/yazi"
 copy = "./yazi"
-
-

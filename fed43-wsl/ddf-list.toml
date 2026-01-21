@@ -11,5 +11,13 @@ original = "//wsl.localhost/FedoraLinux-43/home/yz/.config/yazi"
 copy = "./yazi"
 
 [[dotfiles]]
+original = "//wsl.localhost/FedoraLinux-43/home/yz/documents/dev/projects/.clang-format"
+copy = "./.clang-format"
+
+[[dotfiles]]
 original = "//wsl.localhost/FedoraLinux-43/home/yz/.bashrc"
-copy = ".bashrc"
+copy = "./.bashrc"
+
+[[dotfiles]]
+original = "~/.wslconfig"
+copy = "./.wslconfig"

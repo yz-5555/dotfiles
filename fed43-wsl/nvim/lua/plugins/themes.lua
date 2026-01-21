@@ -29,6 +29,8 @@ return {
 					local c = variants[cfg.variant]
 
 					-- :Inspect or :InspectTree to see these tokens.
+
+					-- C/C++
 					vim.api.nvim_set_hl(0, "Function", { fg = c.blue })
 					vim.api.nvim_set_hl(0, "Type", { italic = false })
 					vim.api.nvim_set_hl(0, "Identifier", { fg = c.bright_white })
@@ -37,9 +39,14 @@ return {
 					vim.api.nvim_set_hl(0, "@constructor.lua", { fg = c.blue, italic = false })
 					vim.api.nvim_set_hl(0, "Keyword", { fg = c.bright_magenta })
 					vim.api.nvim_set_hl(0, "@keyword.operator.c", { fg = c.yellow })
-					-- struct / class
 					vim.api.nvim_set_hl(0, "@type.c", { fg = c.bright_yellow })
 					vim.api.nvim_set_hl(0, "@type.cpp", { fg = c.bright_yellow })
+
+					-- Rust
+					vim.api.nvim_set_hl(0, "@type.rust", { fg = c.bright_yellow })
+					vim.api.nvim_set_hl(0, "@constant.builtin.rust", { fg = c.bright_green })
+					vim.api.nvim_set_hl(0, "@module.rust", { fg = c.yellow })
+
 					-- diagnostics
 					vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { fg = c.red, underline = true })
 					vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { fg = c.yellow, underline = true })

@@ -42,15 +42,17 @@ function cdconf() {
 }
 function cdproj() {
 	if [ -z "$1" ]; then
-		cd "$HOME/documents/projects"
+		cd "$HOME/documents/dev/projects"
 	else
-		cd "$HOME/documents/projects/$1"
+		cd "$HOME/documents/dev/projects/$1"
 	fi
 }
 
 # alias
 alias vim=nvim
 alias vimbash="nvim $HOME/.bashrc"
+alias reload="source $HOME/.bashrc"
+alias ssh="/mnt/c/Windows/System32/OpenSSH/ssh.exe"
 
 # ENV_VAR
 export EDITOR="nvim"

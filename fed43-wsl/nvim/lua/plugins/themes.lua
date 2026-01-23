@@ -48,10 +48,10 @@ return {
 					vim.api.nvim_set_hl(0, "@module.rust", { fg = c.yellow })
 
 					-- diagnostics
-					vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { fg = c.red, underline = true })
-					vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { fg = c.yellow, underline = true })
-					vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { fg = c.blue, underline = true })
-					vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { fg = c.cyan, underline = true })
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { fg = c.red, undercurl = true })
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { fg = c.yellow, undercurl = true })
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { fg = c.blue, undercurl = true })
+					vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { fg = c.cyan, undercurl = true })
 				end,
 			})
 		end,

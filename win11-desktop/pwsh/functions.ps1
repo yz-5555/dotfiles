@@ -15,6 +15,10 @@ function cdconf ($path) {
 	cd "C:\Users\yz\.config\$path"
 }
 # utils
+function exif_sep {
+	New-Item -ItemType Directory -Name "originals"
+	Get-ChildItem -Filter *.jpg_original | Move-Item -Destination .\originals\
+}
 function which ($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue

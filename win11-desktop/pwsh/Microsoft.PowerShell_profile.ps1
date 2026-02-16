@@ -19,9 +19,9 @@ function y {
 Set-Alias vim nvim
 
 # env_vars
-Set-PermanentEnvVar "XDG_CONFIG_HOME" "C:\Users\yz\.config" # nvim, wezterm, winfetch, scoop
-Set-PermanentEnvVar "XDG_STATE_HOME" "C:\Users\yz\.local\state" # nvim-data
-Set-PermanentEnvVar "XDG_DATA_HOME" "C:\Users\yz\.local\share" # nvim-data
+Set-PermanentEnvVar "XDG_CONFIG_HOME" "$HOME\.config" # nvim, wezterm, winfetch, scoop
+Set-PermanentEnvVar "XDG_STATE_HOME" "$HOME\.local\state" # nvim-data
+Set-PermanentEnvVar "XDG_DATA_HOME" "$HOME\.local\share" # nvim-data
 Set-EnvVar "EDITOR" "nvim"
 Set-EnvVar "YAZI_CONFIG_HOME" "$HOME\.config\yazi"
 Set-EnvVar "YAZI_FILE_ONE" "$HOME\scoop\apps\git\current\usr\bin\file.exe"

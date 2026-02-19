@@ -51,7 +51,9 @@ ddf pull win11-desktop
 scoop install neovim alacritty starship yazi
 ```
 > The path to alacritty config is `%APPDATA%/alacritty/alacritty.toml`
+>
 > Check [yazi dependencies](https://yazi-rs.github.io/docs/installation)
+>
 > Don't forget to setup wakatime on neovim
 
 ### 5. C/C++

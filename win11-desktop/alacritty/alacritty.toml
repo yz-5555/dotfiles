@@ -1,5 +1,5 @@
 [general]
-import = [ "~/.config/alacritty/alacritty-rasmus.toml" ]
+import = [ "./alacritty-rasmus.toml" ]
 
 live_config_reload = true
 

@@ -7,7 +7,7 @@ original = "~/.config/wezterm"
 copy = "./wezterm"
 
 [[dotfiles]]
-original = "~/.config/alacritty"
+original = "~/AppData/Roaming/alacritty"
 copy = "./alacritty"
 
 [[dotfiles]]

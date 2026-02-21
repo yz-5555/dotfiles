@@ -76,13 +76,17 @@ scoop install lenovolegiontoolkit // Lenovo Legion laptop
 ```
 ### - CLI apps
 ```
-scoop install winfetch ntop
+scoop install winfetch bottom
 ```
 ### - Real etc
 ```
 scoop install telegram discord obsidian
 ```
+### - Pass
+```
+scoop install keepassxc
+```
+> Install a database from Proton Drive.
 ### Useful tools
 - `crystaldiskinfo`
-- `keepassxc`
 - `libreoffice`

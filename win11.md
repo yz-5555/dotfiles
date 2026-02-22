@@ -87,6 +87,11 @@ scoop install telegram discord obsidian
 scoop install keepassxc
 ```
 > Install a database from Proton Drive.
+### - syncthing
+```
+scoop install syncthing
+```
+> Use Task Scheduler to automate initialization. `--no-console --no-browser`
 ### Useful tools
 - `crystaldiskinfo`
 - `libreoffice`

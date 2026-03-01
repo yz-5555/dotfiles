@@ -36,9 +36,10 @@ scoop install rustup
 ```
 cd ~/Documents/dev/projects
 git clone https://github.com/yz-5555/ddf.git
+cd ddf
 cargo build --release
 
-cd ~/Documents/dev/dotfiles
+cd ~/Documents/dev
 git clone https://github.com/yz-5555/dotfiles.git
 
 $env:DDF_TARGET = "$HOME\Documents\dev\dotfiles"
@@ -48,7 +49,7 @@ ddf pull win11-desktop
 ```
 ### 4. Install tools
 ```
-scoop install neovim alacritty starship yazi
+scoop install neovim alacritty starship yazi winfetch bottom
 ```
 > The path to alacritty config is `%APPDATA%/alacritty/alacritty.toml`
 >
@@ -58,7 +59,7 @@ scoop install neovim alacritty starship yazi
 
 ### 5. C/C++
 ```
-scoop install llvm cmake clangd ninja
+scoop install llvm clangd cmake ninja
 ```
 ### 6. lua
 ```
@@ -73,10 +74,6 @@ scoop install zig zls
 ```
 scoop install g-helper // ASUS gaming laptop
 scoop install lenovolegiontoolkit // Lenovo Legion laptop
-```
-### - CLI apps
-```
-scoop install winfetch bottom
 ```
 ### - Real etc
 ```

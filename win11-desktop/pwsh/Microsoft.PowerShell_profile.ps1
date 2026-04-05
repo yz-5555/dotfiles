@@ -17,6 +17,7 @@ function y {
 
 # alias
 Set-Alias vim nvim
+Set-Alias obs ~/scoop/apps/obsidian/current/Obsidian.com
 
 # env_vars
 Set-PermanentEnvVar "XDG_CONFIG_HOME" "$HOME\.config" # nvim, wezterm, winfetch, scoop

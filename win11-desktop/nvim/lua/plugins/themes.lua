@@ -1,15 +1,5 @@
 return {
 	{
-		"zaldih/themery.nvim",
-		lazy = false,
-		config = function()
-			require("themery").setup({
-				themes = { "rasmus", "vesper" },
-				livePreivew = true,
-			})
-		end,
-	},
-	{
 		"kvrohit/rasmus.nvim",
 		priority = 1000,
 		config = function()
@@ -53,20 +43,6 @@ return {
 					vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { fg = c.blue, underline = true })
 					vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { fg = c.cyan, underline = true })
 				end,
-			})
-		end,
-	},
-	{
-		"datsfilipe/vesper.nvim",
-		config = function()
-			require("vesper").setup({
-				italics = {
-					comments = false, -- Boolean: Italicizes comments
-					keywords = false, -- Boolean: Italicizes keywords
-					functions = false, -- Boolean: Italicizes functions
-					strings = false, -- Boolean: Italicizes strings
-					variables = false, -- Boolean: Italicizes variables
-				},
 			})
 		end,
 	},

@@ -18,6 +18,7 @@ function cdconf ($path) {
 function exif_sep {
 	New-Item -ItemType Directory -Name "originals"
 	Get-ChildItem -Filter *.jpg_original | Move-Item -Destination .\originals\
+	Get-ChildItem -Filter *.mp4_original | Move-Item -Destination .\originals\
 }
 function which ($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
@@ -56,5 +57,3 @@ function Append-Path ($newPath) {
 		$env:Path += ";$newPath"
 	}
 }
-
-# Yes, some codes are AI generated. I mean, who the fuck wants to write codes in this ugly ass fuckass language?

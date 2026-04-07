@@ -68,12 +68,18 @@ alias reload="source $HOME/.bashrc"
 # ENV_VAR
 export EDITOR="nvim"
 export DDF_TARGET="$HOME/Documents/dev/dotfiles/"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # PATH
-
 append_path "$HOME/Tools/zls/zig-out/bin" # zls
 append_path "$HOME/Documents/dev/projects/ddf/target/release" # ddf
 
 eval "$(starship init bash)"
 # source -- ~/.local/share/blesh/ble.sh
 . "$HOME/.cargo/env"
+
+# ssh agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+if [ ! -S "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -a "$SSH_AUTH_SOCK")" > /dev/null
+fi

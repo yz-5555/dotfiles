@@ -1,0 +1,11 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+AlignAfterOpenBracket: true
+ColumnLimit: 0
+DerivePointerAlignment: true
+PointerAlignment: Right
+---
+Language: C
+---
+Language: Cpp
+---

@@ -13,10 +13,7 @@ scoop install firefox
 & ([scriptblock]::Create((irm "https://debloat.raphi.re/")))
 ```
 ### 4. pwsh 7
-```
-winget install --id Microsoft.PowerShell --source winget
-```
-
+- [ ] Install with [msi](https://github.com/powershell/powershell/releases).
 ### 5. NerdFonts && JetBrains Mono NF
 ```
 scoop bucket add nerd-fonts

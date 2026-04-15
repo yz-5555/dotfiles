@@ -3,6 +3,10 @@ original = "~/.config/starship.toml"
 copy = "./starship.toml"
 
 [[dotfiles]]
+original = "~/.config/stylua.toml"
+copy = "./stylua.toml"
+
+[[dotfiles]]
 original = "~/.config/wezterm"
 copy = "./wezterm"
 

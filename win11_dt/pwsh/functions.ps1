@@ -1,18 +1,18 @@
 # cd
 function cddot ($path) {
-	cd "C:\Users\yz\Documents\dev\dotfiles\$path"
+	Set-Location "$HOME\Documents\dev\dotfiles\$path"
 }
 function cdnotes ($path) {
-	cd "C:\Users\yz\Documents\notes\$path"
+	Set-Location "$HOME\Documents\notes\$path"
 }
 function cdpwsh ($path) {
-	cd "C:\Users\yz\Documents\PowerShell\$path"
+	Set-Location "$HOME\Documents\PowerShell\$path"
 }
 function cdproj ($path) {
-	cd "C:\Users\yz\Documents\dev\projects\$path"
+	Set-Location "$HOME\Documents\dev\projects\$path"
 }
 function cdconf ($path) {
-	cd "C:\Users\yz\.config\$path"
+	Set-Location "$env:XDG_CONFIG_HOME\$path"
 }
 # utils
 function exif_sep {
@@ -24,36 +24,9 @@ function which ($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
-function gitopen {
-    start (git config --get remote.origin.url)
-}
 function fedora {
-	wsl ~
+    wsl ~
 }
 function global:reload {
-	. $PROFILE
-}
-function Set-EnvVar {
-    param([string]$Name, [string]$Value)
-    
-    if (-not (Get-ChildItem "Env:\$Name" -ErrorAction SilentlyContinue)) {
-        Set-Content -Path "Env:\$Name" -Value $Value
-    }
-}
-function Set-PermanentEnvVar {
-    param([string]$Name, [string]$Value)
-    
-    $currentValue = [System.Environment]::GetEnvironmentVariable($Name, "User")
-    
-    if ($currentValue -ne $Value) {
-        Write-Host "Updating Registry for $Name..." -ForegroundColor Cyan
-        [System.Environment]::SetEnvironmentVariable($Name, $Value, "User")
-    }
-    
-    Set-Content -Path "Env:\$Name" -Value $Value
-}
-function Append-Path ($newPath) {
-	if ($env:Path -notlike "*$newPath") {
-		$env:Path += ";$newPath"
-	}
+    . $PROFILE
 }

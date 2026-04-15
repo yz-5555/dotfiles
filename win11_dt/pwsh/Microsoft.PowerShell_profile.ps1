@@ -1,8 +1,20 @@
-# starship
-Invoke-Expression (&starship init powershell)
+# starship `starship init powershell < $PATH/.starship_init.ps1`
+. "$HOME\.config\.starship_init.ps1"
 
 # modules
 . "$PSScriptRoot\functions.ps1"
+
+
+# alias
+Set-Alias vim nvi
+Set-Alias obs ~/scoop/apps/obsidian/current/Obsidian.com
+
+# env_vars
+$env:EDITOR = "nvim"
+$env:YAZI_CONFIG_HOME = "$env:XDG_CONFIG_HOME\yazi"
+$env:YAZI_FILE_ONE = "$HOME\scoop\apps\git\current\usr\bin\file.exe"
+$env:DDF_TARGET = "$HOME\Documents\dev\dotfiles"
+$env:Path += ";$HOME\Documents\dev\projects\ddf\target\release"
 
 # yazi
 function y {
@@ -14,19 +26,3 @@ function y {
     }
     Remove-Item -Path $tmp
 }
-
-# alias
-Set-Alias vim nvim
-Set-Alias obs ~/scoop/apps/obsidian/current/Obsidian.com
-
-# env_vars
-Set-PermanentEnvVar "XDG_CONFIG_HOME" "$HOME\.config" # nvim, wezterm, winfetch, scoop
-Set-PermanentEnvVar "XDG_STATE_HOME" "$HOME\.local\state" # nvim-data
-Set-PermanentEnvVar "XDG_DATA_HOME" "$HOME\.local\share" # nvim-data
-Set-EnvVar "EDITOR" "nvim"
-Set-EnvVar "YAZI_CONFIG_HOME" "$HOME\.config\yazi"
-Set-EnvVar "YAZI_FILE_ONE" "$HOME\scoop\apps\git\current\usr\bin\file.exe"
-Set-EnvVar "DDF_TARGET" "$HOME\Documents\dev\dotfiles"
-# notes
-# Alacritty DOES NOT support changing the config path.
-Append-Path "$HOME\Documents\dev\projects\ddf\target\release"

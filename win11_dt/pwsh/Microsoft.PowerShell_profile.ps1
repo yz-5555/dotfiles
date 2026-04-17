@@ -6,7 +6,7 @@
 
 
 # alias
-Set-Alias vim nvi
+Set-Alias vim nvim
 Set-Alias obs ~/scoop/apps/obsidian/current/Obsidian.com
 
 # env_vars

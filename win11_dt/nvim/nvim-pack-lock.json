@@ -27,6 +27,11 @@
     "rasmus.nvim": {
       "rev": "49f7ee7bf3eb00db52c77f84b15bc69f318bafc1",
       "src": "https://github.com/kvrohit/rasmus.nvim"
+    },
+    "rustaceanvim": {
+      "rev": "2497c7b2a61d4eb5dad716371a64ea82fb068bee",
+      "src": "https://github.com/mrcjkb/rustaceanvim",
+      "version": "9.0.0 - 10.0.0"
     }
   }
 }

@@ -31,7 +31,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 		-- Rust
 		vim.api.nvim_set_hl(0, '@type.rust', { fg = c.bright_yellow })
 		vim.api.nvim_set_hl(0, '@constant.builtin.rust', { fg = c.bright_green })
-		vim.api.nvim_set_hl(0, '@module.rust', { fg = c.yellow })
+		vim.api.nvim_set_hl(0, '@module.rust', { fg = c.yellow, force = true })
 
 		-- diagnostics
 		vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { fg = c.red, undercurl = true })

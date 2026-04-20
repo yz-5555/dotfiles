@@ -40,18 +40,11 @@ function cdconf() {
 		cd "$HOME/.config/$1"
 	fi
 }
-function cdproj() {
+function cddev() {
 	if [ -z "$1" ]; then
-		cd "$HOME/Documents/dev/projects"
+		cd "$HOME/Documents/dev"
 	else
-		cd "$HOME/Documents/dev/projects/$1"
-	fi
-}
-function cddot() {
-	if [ -z "$1" ]; then
-		cd "$HOME/Documents/dev/dotfiles"
-	else
-		cd "$HOME/Documents/dev/dotfiles/$1"
+		cd "$HOME/Documents/dev/$1"
 	fi
 }
 function append_path() {
@@ -62,7 +55,7 @@ function append_path() {
 
 # alias
 alias vim=nvim
-alias vimbash="nvim $HOME/.bashrc"
+alias vimshrc="nvim $HOME/.bashrc"
 alias reload="source $HOME/.bashrc"
 
 # ENV_VAR

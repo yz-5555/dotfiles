@@ -91,13 +91,27 @@ vim.o.formatlistpat   = [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
 vim.o.complete        = '.,w,b,kspell'                  -- Use less sources
 vim.o.completeopt     = 'menuone,noselect,fuzzy,nosort' -- Use custom behavior
 vim.o.completetimeout = 100                             -- Limit sources delay
+-- stylua: ignore end
 
 -- Autocommands ===============================================================
+vim.api.nvim_create_autocmd('VimEnter', {
+    callback = function()
+        if vim.fn.argc() == 0 and vim.api.nvim_buf_get_name(0) == '' then
+            local target_file = vim.fn.expand('~/Documents/notes/todo.md')
 
+            if vim.fn.filereadable(target_file) == 1 then
+                vim.cmd.edit(target_file)
+                vim.bo.filetype = 'markdown'
+            end
+        end
+    end,
+})
 
 -- Don't auto-wrap comments and don't insert comment leader after hitting 'o'.
 -- Do on `FileType` to always override these changes from filetype plugins.
-local f = function() vim.cmd('setlocal formatoptions-=c formatoptions-=o') end
+local f = function()
+    vim.cmd('setlocal formatoptions-=c formatoptions-=o')
+end
 Config.new_autocmd('FileType', nil, f, "Proper 'formatoptions'")
 
 -- There are other autocommands created by 'mini.basics'. See 'plugin/30_mini.lua'.
@@ -126,5 +140,6 @@ local diagnostic_opts = {
 }
 
 -- Use `later()` to avoid sourcing `vim.diagnostic` on startup
-Config.later(function() vim.diagnostic.config(diagnostic_opts) end)
--- stylua: ignore end
+Config.later(function()
+    vim.diagnostic.config(diagnostic_opts)
+end)

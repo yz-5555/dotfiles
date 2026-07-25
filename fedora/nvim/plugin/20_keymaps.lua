@@ -1,4 +1,3 @@
--- stylua: ignore start
 Config.leader_group_clues = {
     { mode = 'n', keys = '<Leader>b', desc = '+Buffer' },
     { mode = 'n', keys = '<Leader>e', desc = '+Explore/Edit' },
@@ -28,15 +27,15 @@ local xmap_leader = function(suffix, rhs, desc)
 end
 
 -- yank
-vim.api.nvim_set_option_value("clipboard", "unnamedplus", {})
-map_leader({ 'n', 'v' }, 'y', '"+y"', "Copy")
-map_leader({ 'n', 'v' }, 'p', '"+p"', "Paste")
+vim.api.nvim_set_option_value('clipboard', 'unnamedplus', {})
+map_leader({ 'n', 'v' }, 'y', '"+y"', 'Copy')
+map_leader({ 'n', 'v' }, 'p', '"+p"', 'Paste')
 
 -- resize panes
-nmap("<C-Up>", ":resize +1<CR>", "Resize pane +1")
-nmap("<C-Down>", ":resize -1<CR>", "Resize pane -1")
-nmap("<C-Left>", ":vertical resize -1<CR>", "Vertical resize pane -1")
-nmap("<C-Right>", ":vertical resize +1<CR>", "Vertical resize pane +1")
+nmap('<C-Up>', ':resize +1<CR>', 'Resize pane +1')
+nmap('<C-Down>', ':resize -1<CR>', 'Resize pane -1')
+nmap('<C-Left>', ':vertical resize -1<CR>', 'Vertical resize pane -1')
+nmap('<C-Right>', ':vertical resize +1<CR>', 'Vertical resize pane +1')
 
 local new_scratch_buffer = function()
     vim.api.nvim_win_set_buf(0, vim.api.nvim_create_buf(true, true))
@@ -162,4 +161,3 @@ nmap_leader('vv', '<Cmd>lua MiniVisits.add_label("core")<CR>', 'Add "core" label
 nmap_leader('vV', '<Cmd>lua MiniVisits.remove_label("core")<CR>', 'Remove "core" label')
 nmap_leader('vl', '<Cmd>lua MiniVisits.add_label()<CR>', 'Add label')
 nmap_leader('vL', '<Cmd>lua MiniVisits.remove_label()<CR>', 'Remove label')
--- stylua: ignore end

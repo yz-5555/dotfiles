@@ -132,14 +132,3 @@ Config.on_packchanged = function(plugin_name, kinds, callback, desc)
     Config.new_autocmd('PackChanged', '*', f, desc)
 end
 
-vim.api.nvim_create_autocmd('VimEnter', {
-    callback = function()
-        if vim.fn.argc() == 0 and vim.api.nvim_buf_get_name(0) == '' then
-            local target_file = vim.fn.expand('~/Documents/notes/todo.md')
-
-            if vim.fn.filereadable(target_file) == 1 then
-                vim.cmd('edit ' .. target_file)
-            end
-        end
-    end,
-})

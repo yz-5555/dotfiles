@@ -1,0 +1,65 @@
+#!/bin/bash
+
+function copy() {
+    RED=$'\033[31m'
+    GREEN=$'\033[32m'
+    CLEAR=$'\033[0m'
+
+    if [ ! -e "$1" ]; then
+        echo "${RED}X${CLEAR} Failed to find $1"
+        return
+    fi
+
+    rm -rf "$2"
+    if cp -a "$1" "$2"; then
+        echo "${GREEN}O${CLEAR} Copied $1 to $2"
+    else
+        echo "${RED}X${CLEAR} Failed to copy $1 to $2"
+    fi
+}
+
+list=(
+    "$HOME/.config/starship"
+    "$DOTFILES/starship"
+
+    "$HOME/.config/alacritty"
+    "$DOTFILES/alacritty"
+
+    "$HOME/.bashrc.d"
+    "$DOTFILES/bash/.bashrc.d"
+
+    "$HOME/.bashrc"
+    "$DOTFILES/bash/.bashrc"
+
+    "$HOME/Documents/projects/.clang-format"
+    "$DOTFILES/.clang-format"
+
+    "$HOME/.config/nvim"
+    "$DOTFILES/nvim"
+
+    "$HOME/.config/yazi"
+    "$DOTFILES/yazi"
+
+    "$HOME/.config/mise"
+    "$DOTFILES/mise"
+
+    "$HOME/.config/fontconfig"
+    "$DOTFILES/fontconfig"
+
+    "../.git/hooks/post-merge"
+    "$DOTFILES/post-merge"
+)
+
+mode="${1:-push}"
+
+if [ "$mode" = "pull" ]; then
+    offset_from=1
+    offset_to=0
+else
+    offset_from=0
+    offset_to=1
+fi
+
+for ((i = 0; i < ${#list[@]}; i += 2)); do
+    copy "${list[i + offset_from]}" "${list[i + offset_to]}"
+done

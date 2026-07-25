@@ -17,6 +17,9 @@ stylua = 'latest'
 
 node = 'latest'
 
+python = 'latest'
+pipx = 'latest'
+
 rust = 'latest'
 
 zig = '0.16.0'

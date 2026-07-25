@@ -18,6 +18,5 @@
     * [starship](https://github.com/starship/starship)
     * [mise](https://github.com/jdx/mise)
     * [.clang-format](https://clang.llvm.org/docs/ClangFormat.html)
-    * [tocp](https://github.com/yz025/tocp)
 * Theme
     * [rasmus](https://github.com/kvrohit/rasmus.nvim)

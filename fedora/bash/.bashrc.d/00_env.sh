@@ -5,9 +5,9 @@ function append_path() {
 }
 
 export EDITOR="nvim"
-export STARSHIP_CONFIG_HOME="$HOME/.config/starship"
+export STARSHIP_CONFIG_HOME="$HOME/.config/starship" # what is this for?
 export STARSHIP_CONFIG="$STARSHIP_CONFIG_HOME/starship.toml"
-export DOTFILES="$HOME/Documents/dotfiles/fedora"
+export DOTFILES="$HOME/Documents/dotfiles"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # ssh agent

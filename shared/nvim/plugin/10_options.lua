@@ -113,8 +113,17 @@ local f = function()
     vim.cmd('setlocal formatoptions-=c formatoptions-=o')
 end
 Config.new_autocmd('FileType', nil, f, "Proper 'formatoptions'")
-
 -- There are other autocommands created by 'mini.basics'. See 'plugin/30_mini.lua'.
+
+-- Usercommands ===============================================================
+vim.api.nvim_create_user_command('Todo', function()
+    local target_file = vim.fn.expand('~/Documents/notes/todo.md')
+
+    if vim.fn.filereadable(target_file) == 1 then
+        vim.cmd.edit(target_file)
+        vim.bo.filetype = 'markdown'
+    end
+end, { desc = 'Open todo list' })
 
 -- Diagnostics ================================================================
 

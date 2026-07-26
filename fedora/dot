@@ -20,34 +20,34 @@ function copy() {
 
 list=(
     "$HOME/.config/starship"
-    "$DOTFILES/starship"
+    "$DOTFILES/fedora/starship"
 
     "$HOME/.config/alacritty"
-    "$DOTFILES/alacritty"
+    "$DOTFILES/fedora/alacritty"
 
     "$HOME/.bashrc.d"
-    "$DOTFILES/bash/.bashrc.d"
+    "$DOTFILES/fedora/bash/.bashrc.d"
 
     "$HOME/.bashrc"
-    "$DOTFILES/bash/.bashrc"
+    "$DOTFILES/fedora/bash/.bashrc"
 
     "$HOME/Documents/projects/.clang-format"
-    "$DOTFILES/.clang-format"
+    "$DOTFILES/shared/.clang-format"
 
     "$HOME/.config/nvim"
-    "$DOTFILES/nvim"
+    "$DOTFILES/shared/nvim"
 
     "$HOME/.config/yazi"
-    "$DOTFILES/yazi"
+    "$DOTFILES/shared/yazi"
 
     "$HOME/.config/mise"
-    "$DOTFILES/mise"
+    "$DOTFILES/shared/mise"
 
     "$HOME/.config/fontconfig"
-    "$DOTFILES/fontconfig"
+    "$DOTFILES/fedora/fontconfig"
 
-    "../.git/hooks/post-merge"
-    "$DOTFILES/post-merge"
+    "$DOTFILES/.git/hooks/post-merge"
+    "$DOTFILES/shared/post-merge"
 )
 
 mode="${1:-push}"

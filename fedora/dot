@@ -18,6 +18,11 @@ function copy() {
     fi
 }
 
+function build_foo() {
+    ROOT="$DOTFILES/fedora/starship/git_fetch_mtime"
+    toolbox run -c arch-c clang "$ROOT/main.c" -o "$ROOT/git_fetch_mtime" -O2
+}
+
 list=(
     "$HOME/.config/starship"
     "$DOTFILES/fedora/starship"
@@ -40,7 +45,7 @@ list=(
     "$HOME/.config/yazi"
     "$DOTFILES/shared/yazi"
 
-    "$HOME/.config/mise"
+    "$HOME/.config/mise/conf.d"
     "$DOTFILES/shared/mise"
 
     "$HOME/.config/fontconfig"
@@ -53,6 +58,7 @@ list=(
 mode="${1:-push}"
 
 if [ "$mode" = "pull" ]; then
+    build_foo
     offset_from=1
     offset_to=0
 else

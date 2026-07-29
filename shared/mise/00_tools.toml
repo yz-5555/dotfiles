@@ -13,7 +13,3 @@ fzf = 'latest'
 zoxide = 'latest'
 imagemagick = 'latest'
 'aqua:ip7z/7zip' = 'latest'
-
-'go:github.com/yz025/tocp' = 'latest'
-
-'pipx:nathom/streamrip' = 'latest'

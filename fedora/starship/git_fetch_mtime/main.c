@@ -1,5 +1,6 @@
 // clang-format off
 #include <stdio.h>
+#include <sys/wait.h>
 #include <time.h>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -7,14 +8,32 @@
 #if defined(_WIN32) || defined(WIN32)
     #include <sys/utime.h>
     #define STAT _stat
+    #define FETCH fetch_windows
 #else
     #include <unistd.h>
     #define STAT stat
+    #define FETCH fetch_linux
 #endif
 // clang-format on
 
 #define HR 3600
+#define INTERVAL_HR 4
 
+void fetch_winows() {}
+void fetch_linux() {
+    pid_t pid = fork();
+    if (pid < 0) {
+        return;
+    } else if (pid == 0) {
+        char *args[] = {"git", "fetch", "--quiet", NULL};
+        execvp("git", args);
+    } else {
+        int status;
+        if (waitpid(pid, &status, 0) == -1) {
+            return;
+        }
+    }
+}
 void print_result(double diff) {
     long sec = (long)diff;
 
@@ -43,17 +62,28 @@ void print_result(double diff) {
 }
 
 int main(void) {
-    const char *target = ".git/FETCH_HEAD";
     struct STAT st;
 
-    if (STAT(target, &st) != 0) {
-        printf("null");
+    if (STAT(".git", &st) != 0) {
+        fputs("null", stdout);
+        return 0;
+    }
+
+    if (STAT(".git/FETCH_HEAD", &st) != 0) {
+        fputs("null", stdout);
+        FETCH();
         return 0;
     }
 
     time_t mtime = st.st_mtime;
     time_t now = time(NULL);
     double diff = difftime(now, mtime);
+
+    // Comment these lines to disable auto-fetch.
+    // ============================
+    if (diff >= INTERVAL_HR * HR)
+        FETCH();
+    // ============================
 
     print_result(diff);
 

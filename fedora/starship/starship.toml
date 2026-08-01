@@ -19,11 +19,12 @@ error_symbol = '[\$_](bold red)'
 format = '[\[$name\] ]($style)'
 
 [custom.git_fetch_mtime]
-command = '$STARSHIP_CONFIG_HOME/git_fetch_mtime/git_fetch_mtime'
+command = '$STARSHIP_CONFIG_HOME/git_fetch_mtime/target/release/git_fetch_mtime'
 # when = 'git rev-parse --is-inside-work-tree 2> $null'
 detect_folders = ['.git']
 # disabled = false
-# use_stdin = false
+# when = true
+# use_stdin = true
 symbol = '󰚰 '
 style = 'bold yellow'
 format = '[$symbol$output]($style) '

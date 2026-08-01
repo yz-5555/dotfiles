@@ -62,6 +62,29 @@ later(function()
         src = 'https://github.com/mrcjkb/rustaceanvim',
         version = vim.version.range('^9'),
     } })
+    vim.g.rustaceanvim = {
+        server = {
+            default_settings = {
+                ['rust-analyzer'] = {
+                    standalone = true,
+                    imports = {
+                        granularity = {
+                            group = 'module',
+                        },
+                        prefix = 'self'
+                    },
+                    cargo = {
+                        buildScripts = {
+                            enable = true,
+                        },
+                    },
+                    procMacro = {
+                        enable = true
+                    },
+                },
+            },
+        },
+    }
 end)
 
 later(function()

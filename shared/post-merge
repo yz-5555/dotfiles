@@ -1,7 +1,0 @@
-#!/bin/sh
-
-ROOT="$DOTFILES/starship/git_fetch_mtime"
-SRC="$ROOT/main.c"
-OUT="$ROOT/git_fetch_mtime"
-
-clang "$SRC" -o "$OUT" -O3

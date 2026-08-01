@@ -18,9 +18,9 @@ function copy() {
     fi
 }
 
-function build_foo() {
+function build_gfm() {
     ROOT="$DOTFILES/fedora/starship/git_fetch_mtime"
-    toolbox run -c arch-c clang "$ROOT/main.c" -o "$ROOT/git_fetch_mtime" -O2
+    toolbox run -c arch-c cargo build --manifest-path $ROOT/Cargo.toml --release
 }
 
 list=(
@@ -50,15 +50,12 @@ list=(
 
     "$HOME/.config/fontconfig"
     "$DOTFILES/fedora/fontconfig"
-
-    "$DOTFILES/.git/hooks/post-merge"
-    "$DOTFILES/shared/post-merge"
 )
 
 mode="${1:-push}"
 
 if [ "$mode" = "pull" ]; then
-    build_foo
+    build_gfm
     offset_from=1
     offset_to=0
 else

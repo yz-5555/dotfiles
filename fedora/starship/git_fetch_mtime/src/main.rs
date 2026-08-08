@@ -16,9 +16,7 @@ fn main() {
 }
 
 fn get_fetch_head_mtime_elapsed() -> Option<u64> {
-    let Ok(metadata) = fs::metadata(".git/FETCH_HEAD") else {
-        return None;
-    };
+    let metadata = fs::metadata(".git/FETCH_HEAD").ok()?;
 
     if metadata.len() == 0 {
         return None;

@@ -16,7 +16,14 @@ fn main() {
 }
 
 fn get_fetch_head_mtime_elapsed() -> Option<u64> {
-    let metadata = fs::metadata(".git/FETCH_HEAD").ok()?;
+    let Ok(metadata) = fs::metadata(".git/FETCH_HEAD") else {
+        return None;
+    };
+
+    if metadata.len() == 0 {
+        return None;
+    }
+
     let mtime = metadata.modified().ok()?;
     let elapsed = SystemTime::now().duration_since(mtime).ok()?;
 

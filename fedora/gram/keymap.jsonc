@@ -1,0 +1,54 @@
+// Gram keymap
+//
+// For information on binding keys, see the Gram
+// documentation: gram://docs/key-bindings
+//
+// To see the default key bindings run `gram: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space f f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+      "context": "vim_mode == normal",
+      "bindings": {
+          "ctrl-up": "vim::ResizePaneUp",
+          "ctrl-down": "vim::ResizePaneDown",
+          "ctrl-left": "vim::ResizePaneLeft",
+          "ctrl-right": "vim::ResizePaneRight",
+
+          "ctrl-h": "workspace::ActivatePaneLeft",
+          "ctrl-j": "workspace::ActivatePaneDown",
+          "ctrl-k": "workspace::ActivatePaneUp",
+          "ctrl-l": "workspace::ActivatePaneRight",
+    }
+  },
+  {
+      "context": "vim_mode == normal",
+    "bindings": {
+        "space l a": "editor::ToggleCodeActions",
+        "space l d": "diagnostics::Deploy",
+        "space l f": "editor::Format",
+        "space l i": "editor::GoToImplementation",
+        "space l h": "editor::Hover",
+        "space l R": "editor::FindAllReferences",
+        "space l s": "editor::GoToDefinition",
+        "space l r": "editor::Rename"
+    }
+  },
+  {
+      "context": "vim_mode == normal",
+      "bindings": {
+          "space f g": "quick_search::Toggle"
+      }
+  }
+]

@@ -1,0 +1,97 @@
+// Gram settings
+//
+// For information on how to configure Gram, see the Gram
+// documentation: gram://docs/configuring-gram
+//
+// To see all of Gram's default settings without changing your
+// custom settings, run `gram: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "prettier": {
+    "allowed": true
+  },
+  "restore_on_startup": "empty_tab",
+  "lsp": {
+    "json-language-server": {
+      "binary": {
+        "allow_binary_download": false
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "window_decorations": "client",
+  "use_system_window_tabs": false,
+  "bottom_dock_layout": "contained",
+  "tabs": {
+    "show_diagnostics": "off",
+    "activate_on_close": "neighbour",
+    "file_icons": false,
+    "git_status": true
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": true,
+    "show_nav_history_buttons": false
+  },
+  "title_bar": {
+    "show_branch_name": true,
+    "show_branch_icon": true,
+    "show": true
+  },
+  "debugger": {
+    "button": true
+  },
+  "search": {
+    "button": true
+  },
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "button": true
+  },
+  "project_panel": {
+    "button": true
+  },
+  "status_bar": {
+    "cursor_position_button": true,
+    "active_language_button": true,
+    "active_file": false,
+    "icon_size": "large",
+    "show": true
+  },
+  "diagnostics": {
+    "button": true,
+    "inline": {
+      "update_debounce_ms": 150,
+      "enabled": true
+    }
+  },
+  // buffer_font
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_fallbacks": [ "SarasaTermJ Nerd Font" ],
+  "buffer_font_weight": 600,
+  "buffer_font_features": {
+    "cv01": 1,
+    "cv02": 1,
+    "cv03": 1,
+    "cv11": 1,
+    "cv12": 1
+  },
+  "buffer_font_size": 14,
+
+  // ui_font
+  "ui_font_family": "JetBrainsMono NFP",
+  "ui_font_fallbacks": [ "SarasaTermJ Nerd Font" ],
+  "ui_font_size": 14,
+
+  "tab_size": 4,
+
+  "smooth_scroll": {
+      "enabled": true,
+      "duration": 160
+  },
+
+  "vim_mode": true,
+  "base_keymap": "Minimal",
+  "theme": "Melange Dark",
+}

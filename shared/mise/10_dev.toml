@@ -1,11 +1,14 @@
 [tools]
 neovim = '0.12.2'
 tree-sitter = 'latest'
+'forgejo:GramEditor/gram' = 'latest'
 
 arduino-cli = 'latest'
 
 'npm:bash-language-server' = 'latest'
 shfmt = 'latest'
+
+'npm:vscode-langservers-extracted' = 'latest'
 
 go = 'latest'
 'go:golang.org/x/tools/gopls' = 'latest'

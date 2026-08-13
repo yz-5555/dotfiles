@@ -42,6 +42,9 @@ list=(
     "$HOME/.config/nvim"
     "$DOTFILES/shared/nvim"
 
+    "$HOME/.config/gram"
+    "$DOTFILES/fedora/gram"
+
     "$HOME/.config/yazi"
     "$DOTFILES/shared/yazi"
 

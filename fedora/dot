@@ -45,6 +45,9 @@ list=(
     "$HOME/.config/gram"
     "$DOTFILES/fedora/gram"
 
+    "$HOME/.config/helix"
+    "$DOTFILES/fedora/helix"
+
     "$HOME/.config/yazi"
     "$DOTFILES/shared/yazi"
 

@@ -1,0 +1,40 @@
+theme = "my_theme"
+
+[editor]
+cursorline = true
+true-color = true
+undercurl = true
+end-of-line-diagnostics = "hint"
+
+[editor.lsp]
+snippets = false
+
+[editor.cursor-shape]
+insert = 'bar'
+
+[editor.file-picker]
+hidden = false
+parents = false
+git-ignore = false
+git-global = false
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.indent-guides]
+render = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"

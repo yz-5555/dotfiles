@@ -1,0 +1,21 @@
+inherits = "rasmus"
+
+"namespace" = "yellow"
+
+"keyword" = "bright_magenta"
+"keyword.control.conditional" = "bright_magenta"
+
+"function" = "blue"
+"function.macro" = { fg = "blue", modifiers = [ "underline", "bold" ] }
+"function.builtin" = "blue"
+
+"type" = "bright_yellow"
+"type.builtin" = "bright_magenta"
+"type.enum.variant" = "bright_green"
+
+"comment" = "gray05"
+
+"constant" = "cyan"
+"constant.builtin" = "cyan"
+"constant.numeric" = "cyan"
+"constant.character.escape" = "bright_magenta"

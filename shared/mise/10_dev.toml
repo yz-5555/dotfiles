@@ -1,6 +1,7 @@
 [tools]
-neovim = '0.12.2'
 tree-sitter = 'latest'
+helix = 'latest'
+neovim = '0.12.2'
 'forgejo:GramEditor/gram' = 'latest'
 
 arduino-cli = 'latest'

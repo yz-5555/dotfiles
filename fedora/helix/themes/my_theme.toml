@@ -1,21 +1,21 @@
 inherits = "rasmus"
 
-"namespace" = "yellow"
+"namespace" = "white"
 
-"keyword" = "bright_magenta"
-"keyword.control.conditional" = "bright_magenta"
+"keyword.control.conditional" = "blue"
+"keyword.directive" = "blue"
 
-"function" = "blue"
-"function.macro" = { fg = "blue", modifiers = [ "underline", "bold" ] }
-"function.builtin" = "blue"
-
-"type" = "bright_yellow"
-"type.builtin" = "bright_magenta"
+"type.builtin" = "blue"
 "type.enum.variant" = "bright_green"
+
+"function" = "bright_white"
+# d9bba2?
+"function.macro" = "bright_white"
+"function.builtin" = "bright_white"
 
 "comment" = "gray05"
 
-"constant" = "cyan"
-"constant.builtin" = "cyan"
-"constant.numeric" = "cyan"
-"constant.character.escape" = "bright_magenta"
+"constant" = "bright_green"
+"constant.builtin" = "bright_green"
+"constant.numeric" = "bright_green"
+"constant.character.escape" = "yellow"

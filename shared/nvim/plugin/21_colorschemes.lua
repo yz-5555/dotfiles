@@ -22,25 +22,28 @@ later(function()
             end
 
             -- :Inspect or :InspectTree to see these tokens.
+            -- diagnostics
+            hl('DiagnosticUnderlineError', { fg = c.red, undercurl = true })
+            hl('DiagnosticUnderlineWarn', { fg = c.yellow, undercurl = true })
+            hl('DiagnosticUnderlineInfo', { fg = c.blue, undercurl = true })
+            hl('DiagnosticUnderlineHint', { fg = c.cyan, undercurl = true })
 
             hl('Delimiter', { fg = c.gray06 })
 
+            hl('Type', { italic = false })
+            hl('Identifier', { fg = c.white })
+            hl('Macro', { fg = c.bright_green, bold = true, italic = false })
+            hl('Special', { fg = c.blue, italic = false })
+            hl('Keyword', { fg = c.blue })
+            
             -- C/C++
-            hl('Function', { fg = c.blue })
-
             hl('@variable.c', { fg = c.white })
             hl('@lsp.type.variable.c', { fg = c.white })
             hl('@lsp.type.variable.cpp', { fg = c.white })
-            hl('@variable.parameter.c', { fg = c.bright_white })
-            hl('@variable.parameter.cpp', { fg = c.bright_white })
-
-            hl('Type', { italic = false })
-            hl('Identifier', { fg = c.bright_white })
-            hl('Macro', { bold = true, italic = false })
-            hl('Special', { fg = c.bright_magenta, italic = false })
-            hl('Keyword', { fg = c.bright_magenta })
-            hl('@type.c', { fg = c.bright_yellow })
-            hl('@type.cpp', { fg = c.bright_yellow })
+            hl('@variable.parameter.c', { fg = c.white })
+            hl('@variable.parameter.cpp', { fg = c.white })
+            hl('@type.c', { fg = c.bright_white })
+            hl('@type.cpp', { fg = c.bright_white })
 
             -- Go
             hl('@type.definition.go', { fg = c.bright_yellow })
@@ -60,12 +63,6 @@ later(function()
 
             -- lua
             hl('@constructor.lua', { fg = c.blue, italic = false })
-
-            -- diagnostics
-            hl('DiagnosticUnderlineError', { fg = c.red, undercurl = true })
-            hl('DiagnosticUnderlineWarn', { fg = c.yellow, undercurl = true })
-            hl('DiagnosticUnderlineInfo', { fg = c.blue, undercurl = true })
-            hl('DiagnosticUnderlineHint', { fg = c.cyan, undercurl = true })
         end,
     })
     vim.cmd([[colorscheme rasmus]])

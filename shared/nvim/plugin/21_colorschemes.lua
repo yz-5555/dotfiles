@@ -20,9 +20,18 @@ later(function()
             local hl = function(name, val)
                 vim.api.nvim_set_hl(0, name, val)
             end
+            local hl_c_cpp = function(name, val)
+                vim.api.nvim_set_hl(0, name + '.c', val)
+                vim.api.nvim_set_hl(0, name + '.cpp', val)
+            end
+
+            local c_type = c.bright_cyan
+            local c_func = c.bright_blue
+            local c_const = c.green -- TODO: cyan vs bright_green vs green
+            local c_keyword = c.blue
 
             -- :Inspect or :InspectTree to see these tokens.
-            -- diagnostics
+            -- diagnostics TODO: bright or not?
             hl('DiagnosticUnderlineError', { fg = c.red, undercurl = true })
             hl('DiagnosticUnderlineWarn', { fg = c.yellow, undercurl = true })
             hl('DiagnosticUnderlineInfo', { fg = c.blue, undercurl = true })
@@ -30,39 +39,34 @@ later(function()
 
             hl('Delimiter', { fg = c.gray06 })
 
-            hl('Type', { italic = false })
+            hl('Type', { fg = c_type })
+            hl('Function', { fg = c_func })
             hl('Identifier', { fg = c.white })
-            hl('Macro', { fg = c.bright_green, bold = true, italic = false })
-            hl('Special', { fg = c.blue, italic = false })
-            hl('Keyword', { fg = c.blue })
+            hl('Macro', { fg = c_const })
+            hl('Special', { fg = c_keyword })
+            hl('Keyword', { fg = c_keyword })
             
             -- C/C++
-            hl('@variable.c', { fg = c.white })
-            hl('@lsp.type.variable.c', { fg = c.white })
-            hl('@lsp.type.variable.cpp', { fg = c.white })
-            hl('@variable.parameter.c', { fg = c.white })
-            hl('@variable.parameter.cpp', { fg = c.white })
-            hl('@type.c', { fg = c.bright_white })
-            hl('@type.cpp', { fg = c.bright_white })
+            hl_c_cpp('@variable', { fg = c.white })
+            hl_c_cpp('@lsp.type.variable', { fg = c.white })
+            hl_c_cpp('@lsp.type.parameter', { fg = c.white })
+            hl_c_cpp('@type', { fg = c_type })
 
             -- Go
-            hl('@type.definition.go', { fg = c.bright_yellow })
-            hl('@type.go', { fg = c.bright_yellow })
-            hl('@constant.builtin.go', { fg = c.bright_green })
-            hl('@module.go', { fg = c.yellow })
+            hl('@type.definition.go', { fg = c_type })
+            hl('@type.go', { fg = c_type })
+            hl('@constant.builtin.go', { fg = c_const })
 
             -- Rust
-            hl('@type.rust', { fg = c.bright_yellow })
-            hl('@constant.builtin.rust', { fg = c.bright_green })
-            hl('@module.rust', { fg = c.yellow, force = true })
-            hl('@lsp.type.namespace.rust', { fg = c.yellow, force = true })
-            hl('@function.macro.rust', { fg = c.blue })
-            hl('@lsp.type.macro.rust', { fg = c.blue })
+            hl('@type.rust', { fg = c_type })
+            hl('@constant.builtin.rust', { fg = c_const })
+            hl('@function.macro.rust', { fg = c_const }) -- not sure Rust macro should be considered as const or func
+            hl('@lsp.type.macro.rust', { fg = c_const })
             hl('@variable.rust', { fg = c.white })
             hl('@lsp.type.variable.rust', { fg = c.white })
 
             -- lua
-            hl('@constructor.lua', { fg = c.blue, italic = false })
+            hl('@constructor.lua', { fg = c.blue })
         end,
     })
     vim.cmd([[colorscheme rasmus]])

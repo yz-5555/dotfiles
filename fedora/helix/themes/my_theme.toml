@@ -2,20 +2,29 @@ inherits = "rasmus"
 
 "namespace" = "white"
 
+"variable.builtin" = "white"
+"variable.parameter" = "white"
+
 "keyword.control.conditional" = "blue"
 "keyword.directive" = "blue"
 
-"type.builtin" = "blue"
-"type.enum.variant" = "bright_green"
+"type" = "bright_cyan"
+"type.builtin" = "bright_cyan"
+"type.enum.variant" = "green"
 
-"function" = "bright_white"
-# d9bba2?
-"function.macro" = "bright_white"
-"function.builtin" = "bright_white"
+"constructor" = "bright_blue"
+
+"function" = "bright_blue"
+"function.macro" = "bright_blue"
+"function.builtin" = "bright_blue"
 
 "comment" = "gray05"
 
-"constant" = "bright_green"
-"constant.builtin" = "bright_green"
-"constant.numeric" = "bright_green"
+"constant" = "green"
+"constant.builtin" = "green"
+"constant.numeric" = "green"
 "constant.character.escape" = "yellow"
+
+"string" = "green"
+"string.regexp" = "green"
+"string.special" = "green"

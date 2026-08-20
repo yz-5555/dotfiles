@@ -21,17 +21,11 @@ later(function()
                 vim.api.nvim_set_hl(0, name, val)
             end
             local hl_c_cpp = function(name, val)
-                vim.api.nvim_set_hl(0, name + '.c', val)
-                vim.api.nvim_set_hl(0, name + '.cpp', val)
+                vim.api.nvim_set_hl(0, name .. '.c', val)
+                vim.api.nvim_set_hl(0, name .. '.cpp', val)
             end
 
-            local c_type = c.bright_cyan
-            local c_func = c.bright_blue
-            local c_const = c.green -- TODO: cyan vs bright_green vs green
-            local c_keyword = c.blue
-
             -- :Inspect or :InspectTree to see these tokens.
-            -- diagnostics TODO: bright or not?
             hl('DiagnosticUnderlineError', { fg = c.red, undercurl = true })
             hl('DiagnosticUnderlineWarn', { fg = c.yellow, undercurl = true })
             hl('DiagnosticUnderlineInfo', { fg = c.blue, undercurl = true })
@@ -39,34 +33,44 @@ later(function()
 
             hl('Delimiter', { fg = c.gray06 })
 
-            hl('Type', { fg = c_type })
-            hl('Function', { fg = c_func })
+            hl('Type', { fg = c.bright_cyan })
+            hl('Value', { fg = c.green })
+            hl('Constant', { fg = c.bright_green })
+            hl('Function', { fg = c.bright_blue })
             hl('Identifier', { fg = c.white })
-            hl('Macro', { fg = c_const })
-            hl('Special', { fg = c_keyword })
-            hl('Keyword', { fg = c_keyword })
-            
+            hl('SpecialIdentifier', { fg = c.bright_white })
+            hl('Keyword', { fg = c.blue })
+
+            hl('Number', { link = 'Value' })
+            hl('String', { link = 'Value' })
+            hl('Character', { link = 'Value' })
+            hl('Boolean', { link = 'Constant' })
+            hl('Macro', { link = 'Constant' })
+            hl('Special', { link = 'Keyword' })
+            hl('SpecialChar', { link = 'Operator' })
+
             -- C/C++
-            hl_c_cpp('@variable', { fg = c.white })
-            hl_c_cpp('@lsp.type.variable', { fg = c.white })
-            hl_c_cpp('@lsp.type.parameter', { fg = c.white })
-            hl_c_cpp('@type', { fg = c_type })
+            hl('@variable', { link = 'Identifier' })
+            hl_c_cpp('@keyword.operator', { link = 'Operator' })
+            hl_c_cpp('@type.builtin', { link = 'Keyword' })
+            hl_c_cpp('@Value.macro', { link = 'Constant' })
+
+            hl_c_cpp('@lsp.type.macro', { link = 'Constant' })
+            hl_c_cpp('@lsp.type.enumMember', { link = 'Constant' })
+            hl_c_cpp('@lsp.type.property', { link = 'SpecialIdentifier' })
+            hl_c_cpp('@lsp.type.type', { link = 'Keyword' })
 
             -- Go
-            hl('@type.definition.go', { fg = c_type })
-            hl('@type.go', { fg = c_type })
-            hl('@constant.builtin.go', { fg = c_const })
+            hl('@property.go', { link = 'SpecialIdentifier' })
+            hl('@module.go', { link = 'SpecialIdentifier' })
+            hl('@function.builtin.go', { link = 'Function' })
+            hl('@constant.builtin.go', { link = 'Constant' })
 
             -- Rust
-            hl('@type.rust', { fg = c_type })
-            hl('@constant.builtin.rust', { fg = c_const })
-            hl('@function.macro.rust', { fg = c_const }) -- not sure Rust macro should be considered as const or func
-            hl('@lsp.type.macro.rust', { fg = c_const })
-            hl('@variable.rust', { fg = c.white })
-            hl('@lsp.type.variable.rust', { fg = c.white })
+            hl('@lsp.type.macro.rust', { link = 'Function' })
 
             -- lua
-            hl('@constructor.lua', { fg = c.blue })
+            hl('@constructor.lua', { link = 'Function' })
         end,
     })
     vim.cmd([[colorscheme rasmus]])

@@ -1,16 +1,17 @@
 inherits = "rasmus"
 
-"namespace" = "white"
+"namespace" = "bright_white"
 
 "variable.builtin" = "white"
-"variable.parameter" = "white"
+"variable.parameter" = "bright_white"
+"variable.other.member" = "bright_white"
 
 "keyword.control.conditional" = "blue"
 "keyword.directive" = "blue"
 
 "type" = "bright_cyan"
-"type.builtin" = "bright_cyan"
-"type.enum.variant" = "green"
+"type.builtin" = "blue"
+"type.enum.variant" = "bright_green"
 
 "constructor" = "bright_blue"
 
@@ -20,11 +21,11 @@ inherits = "rasmus"
 
 "comment" = "gray05"
 
-"constant" = "green"
-"constant.builtin" = "green"
-"constant.numeric" = "green"
-"constant.character.escape" = "yellow"
-
 "string" = "green"
 "string.regexp" = "green"
 "string.special" = "green"
+
+"constant" = "bright_green"
+"constant.builtin" = "bright_green"
+"constant.numeric" = "green"
+"constant.character.escape" = "yellow"

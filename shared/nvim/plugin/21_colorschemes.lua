@@ -26,11 +26,6 @@ later(function()
             end
 
             -- :Inspect or :InspectTree to see these tokens.
-            hl('DiagnosticUnderlineError', { fg = c.red, undercurl = true })
-            hl('DiagnosticUnderlineWarn', { fg = c.yellow, undercurl = true })
-            hl('DiagnosticUnderlineInfo', { fg = c.blue, undercurl = true })
-            hl('DiagnosticUnderlineHint', { fg = c.cyan, undercurl = true })
-
             hl('Delimiter', { fg = c.gray06 })
 
             hl('Type', { fg = c.bright_cyan })
@@ -53,7 +48,7 @@ later(function()
             hl('@variable', { link = 'Identifier' })
             hl_c_cpp('@keyword.operator', { link = 'Operator' })
             hl_c_cpp('@type.builtin', { link = 'Keyword' })
-            hl_c_cpp('@Value.macro', { link = 'Constant' })
+            hl_c_cpp('@constant.macro', { link = 'Constant' })
 
             hl_c_cpp('@lsp.type.macro', { link = 'Constant' })
             hl_c_cpp('@lsp.type.enumMember', { link = 'Constant' })

@@ -64,8 +64,14 @@ later(function()
             -- Rust
             hl('@lsp.type.macro.rust', { link = 'Function' })
 
-            -- lua
+            -- Lua
             hl('@constructor.lua', { link = 'Function' })
+
+            -- Zig
+            hl('@module.zig', { link = 'SpecialIdentifier', force = true })
+
+            hl('@lsp.type.type.zig', { link = 'Keyword' })
+            hl('@lsp.type.namespace.zig', { link = 'SpecialIdentifier' })
         end,
     })
     vim.cmd([[colorscheme rasmus]])

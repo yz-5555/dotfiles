@@ -14,7 +14,6 @@ shfmt = 'latest'
 go = 'latest'
 'go:golang.org/x/tools/gopls' = 'latest'
 'go:github.com/golangci/golangci-lint/cmd/golangci-lint' = 'latest'
-goreleaser = 'latest'
 
 lua-language-server = 'latest'
 stylua = 'latest'
@@ -26,5 +25,5 @@ pipx = 'latest'
 
 rust = 'latest'
 
-zig = '0.16.0'
-zls = '0.16.0'
+zig = '0.15.1'
+zls = '0.15.1'

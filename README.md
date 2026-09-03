@@ -1,3 +1,5 @@
+# ! MIGRATED TO [CODEBERG](https://codeberg.org/yz025/dotfiles).
+
 # dotfiles
 ## Table
 * Shared
